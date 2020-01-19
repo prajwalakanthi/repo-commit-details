@@ -1,0 +1,29 @@
+<div class="d-flex justify-content-center">
+   <h3>Git User Commit Details</h3>     
+</div>
+
+<div class="container">
+    <h4>Name: {{user_name}}</h4>
+<div class="row">
+<div class="col-md-2 col-lg-2 col-sm-2 px-2" *ngFor = "let repo of all_repos">
+    <div class="card mr-2 text-left" style="width: 15rem;height:13rem;">
+        <div class="card-header" style="height:5rem;">
+           {{repo.name}}
+          </div>       
+        <div class="card-body">
+            <p>Default Branch: {{repo.default_branch}}</p>
+            <p>Created: {{repo.created_at}}</p>            
+          </div>
+      </div>
+</div>
+
+    <!-- <ul class="list-group">
+        <li class="list-group-item" *ngFor = "let repo of all_repos">{{repo.name}}</li>        
+      </ul>  -->
+</div>
+<br>
+<h4>Repo names by No of Commits</h4>
+<div class="row">    
+    <canvas class="w-100" id="canvas_bar" width="500" height="100"></canvas>
+</div>
+</div>
